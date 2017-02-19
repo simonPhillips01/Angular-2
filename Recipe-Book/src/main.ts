@@ -10,4 +10,9 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule);
-bootstrap(RecipeBookAppComponent, [ShoppingListService])
+bootstrap(RecipeBookAppComponent, [
+  APP_ROUTES_PROVIDERS,
+  ShoppingListService,
+  provideForms(),
+  disableDeprecatedForms()
+])
